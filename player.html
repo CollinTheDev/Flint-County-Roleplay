@@ -7,7 +7,7 @@
 <?php $response = file_get_contents("http://206.168.173.19:30120/dynamic.json");
 $json = json_decode($response);?>
 
-echo "{$json->clients}/{$json->sv_maxclients}"
+<p>echo "{$json->clients}/{$json->sv_maxclients}"</p>
 
 </body>
 </html>
