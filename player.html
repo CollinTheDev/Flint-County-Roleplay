@@ -5,9 +5,9 @@
 <h1>Welcome to My Website</h1>
 
 <?php $response = file_get_contents("http://206.168.173.19:30120/dynamic.json");
-$json = json_decode($response);
+$json = json_decode($response);?>
 
-echo "{$json->clients}/{$json->sv_maxclients}"; ?>
+echo "{$json->clients}/{$json->sv_maxclients}"
 
 </body>
 </html>
