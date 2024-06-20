@@ -1,13 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FiveM Server Player Count</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            function updatePlayerCount() {
+                var serverIP = "your_server_ip"; // Replace with your FiveM server IP
+                var serverPort = "your_server_port"; // Replace with your FiveM server port
+                var url = "http://" + serverIP + ":" + serverPort + "/players.json";
+
+                $.getJSON(url, function(data) {
+                    var playerCount = data.length; // Assuming 'players.json' returns an array of players
+                    $('#player-count').text(playerCount);
+                }).fail(function() {
+                    $('#player-count').text('Error fetching player count');
+                });
+            }
+
+            // Initial call to update player count
+            updatePlayerCount();
+
+            // Refresh player count every 30 seconds (adjust as needed)
+            setInterval(updatePlayerCount, 30000);
+        });
+    </script>
+</head>
 <body>
-
-<h1>Welcome to My Website</h1>
-
-<?php $response = file_get_contents("http://206.168.173.19:30120/dynamic.json");?>
-<?php $json = json_decode($response);?>
-
-<p>echo "{$json->clients}/{$json->sv_maxclients}"</p>
-
+    <h1>FiveM Server Player Count</h1>
+    <p>Current player count: <span id="player-count">Loading...</span></p>
 </body>
 </html>
