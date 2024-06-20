@@ -3,28 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flint County Roleplay - Rules</title>
+    <title>Rules - Flint County Roleplay</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 0;
             background-color: #f0f0f0;
             color: #333;
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
         }
         .header {
             background-color: #333;
             color: #fff;
             text-align: center;
             padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         .header img {
             max-width: 500px;
             height: auto;
             margin-top: 10px;
         }
-        .rules-container {
+        .header-buttons {
+            margin-right: 20px;
+        }
+        .container {
+            flex: 1;
             max-width: 800px;
             margin: 20px auto;
             padding: 20px;
@@ -32,23 +42,29 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 5px;
         }
-        .rule-section {
+        .server-info {
+            text-align: center;
             margin-bottom: 20px;
         }
-        .rule-section h2 {
-            color: #333;
+        .server-info h2 {
             margin-top: 0;
+            color: #333;
         }
-        .rule-section ol {
-            list-style-type: decimal;
-            padding-left: 20px;
+        .server-info p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        .rules-iframe {
+            width: 100%;
+            height: 800px; /* Adjust height as needed */
+            border: none; /* Remove iframe border */
         }
         .footer {
             text-align: center;
-            margin-top: 20px;
             padding: 10px;
             background-color: #333;
             color: #fff;
+            margin-top: auto;
         }
         .footer .discord-logo {
             width: 30px;
@@ -59,33 +75,18 @@
 </head>
 <body>
     <div class="header">
+        <div class="header-buttons">
+            <a href="index.html" class="back-button">Back to Homepage</a>
+        </div>
         <img src="FCRP.png" alt="FCRP Logo">
-        <h1>Flint County Roleplay - Rules</h1>
+        <h1>Rules - Flint County Roleplay</h1>
     </div>
-    <div class="rules-container">
-        <div class="rule-section">
-            <h2>General Rules</h2>
-            <ol>
-                <li>Respect all players and staff members.</li>
-                <li>Do not use offensive language or engage in hate speech.</li>
-                <li>Follow server guidelines for roleplaying and character behavior.</li>
-            </ol>
-        </div>
-        <div class="rule-section">
-            <h2>Roleplay Rules</h2>
-            <ol>
-                <li>Remain in-character (IC) at all times.</li>
-                <li>Do not powergame or metagame.</li>
-                <li>Obey traffic laws and server-specific rules during roleplay scenarios.</li>
-            </ol>
-        </div>
-        <div class="rule-section">
-            <h2>Server-Specific Rules</h2>
-            <ol>
-                <li>Use only approved mods and scripts.</li>
-                <li>Report any bugs or issues to staff immediately.</li>
-                <li>Do not engage in cheating or exploit server mechanics.</li>
-            </ol>
+    <div class="container">
+        <div class="server-info">
+            <h2>Rules</h2>
+            <p>Here are the rules for Flint County Roleplay. These rules ensure a fair and enjoyable experience for all our players.</p>
+            <!-- Embedded site iframe -->
+            <iframe class="rules-iframe" src="https://example.com/rules" title="Rules"></iframe>
         </div>
     </div>
     <footer class="footer">
