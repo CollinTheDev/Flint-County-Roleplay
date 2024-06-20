@@ -1,1 +1,162 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIA - Flint County Roleplay</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+        .header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header img {
+            max-width: 500px;
+            height: auto;
+            margin-top: 10px;
+        }
+        .header-links {
+            display: flex;
+            align-items: center;
+        }
+        .header-links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: background-color 0.3s ease;
+            border-radius: 5px;
+        }
+        .header-links a:hover {
+            background-color: #555;
+        }
+        .container {
+            flex: 1;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        .department-info {
+            text-align: center;
+        }
+        .department-info h2 {
+            color: #333;
+        }
+        .department-info p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        .features {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .feature {
+            flex: 0 1 30%;
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .feature h3 {
+            color: #333;
+        }
+        .feature p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            margin-top: auto;
+        }
+        .footer .discord-logo {
+            width: 30px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 5px;
+        }
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-links">
+            <a href="index.html">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Departments</button>
+                <div class="dropdown-content">
+                    <a href="LSCSO.html">LSCSO</a>
+                    <a href="BCSO.html">BCSO</a>
+                    <a href="LSPD.html">LSPD</a>
+                    <a href="SAST.html">SAST</a>
+                    <a href="CIA.html">CIA</a>
+                    <a href="DHS.html">DHS</a>
+                </div>
+            </div>
+            <a href="coc.html">Chain of Command</a>
+            <a href="rules.html">Rules</a>
+        </div>
+        <img src="FCRP.png" alt="FCRP Logo">
+        <h1>Welcome to CIA</h1>
+    </div>
+    <div class="container">
+        <div class="department-info">
+            <h2>About CIA</h2>
+              <p>CIA is Handpicked</p>
+            <h3>Status: Handpicked</h3>
+        </div>
+    </div>
+    <footer class="footer">
+        <a href="https://discord.gg/jUxxeG5qt8" target="_blank">
+            <img src="discord-logo.png" alt="Discord Logo" class="discord-logo">
+        </a>
+        <p>&copy; 2024 Flint County Roleplay (FCRP). All rights reserved.</p>
+    </footer>
+</body>
+</html>
