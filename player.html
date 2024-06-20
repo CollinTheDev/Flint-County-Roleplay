@@ -5,28 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FiveM Server Player Count</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            function updatePlayerCount() {
-                var serverIP = "206.168.173.19"; // Replace with your FiveM server IP
-                var serverPort = "30120"; // Replace with your FiveM server port
-                var url = "http://" + serverIP + ":" + serverPort + "/players.json";
+    <script type="text/javascript">
+    async function getStuff() {
+        let response = await fetch('https://ip:port/dynamic.json', {
+            method: 'GET',
+            mode: 'no-cors'
+        })
+        //let json = await response.text();
+        //console.log(json);
+  .then(response => response.json())
+  .then(data => doStuff(data));
+    }
+function doStuff(data)
+{
+    let clients = data.clients;
+    let maxclients = data.sv_maxclients;
+    document.getElementById("clients").innerHTML(clients);
+    document.getElementById("maxclients").innerHTML(maxclients);
+}
 
-                $.getJSON(url, function(data) {
-                    var playerCount = data.length; // Assuming 'players.json' returns an array of players
-                    $('#player-count').text(playerCount);
-                }).fail(function() {
-                    $('#player-count').text('Error fetching player count');
-                });
-            }
-
-            // Initial call to update player count
-            updatePlayerCount();
-
-            // Refresh player count every 30 seconds (adjust as needed)
-            setInterval(updatePlayerCount, 30000);
-        });
-    </script>
+</script>
 </head>
 <body>
     <h1>FiveM Server Player Count</h1>
