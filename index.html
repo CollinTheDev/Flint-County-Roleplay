@@ -81,6 +81,32 @@
         .join-button:hover {
             background-color: #0056b3; /* Darker blue on hover */
         }
+        .dropdown {
+            margin-top: 10px;
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 5px;
+        }
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
         .features {
             margin-top: 30px;
             display: flex;
@@ -121,6 +147,17 @@
     <div class="header">
         <div class="header-links">
             <a href="index.html">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Departments</button>
+                <div class="dropdown-content">
+                    <a href="LSCSO.html">LSCSO</a>
+                    <a href="BCSO.html">BCSO</a>
+                    <a href="LSPD.html">LSPD</a>
+                    <a href="SAST.html">SAST</a>
+                    <a href="CIA.html">CIA</a>
+                    <a href="DHS.html">DHS</a>
+                </div>
+            </div>
             <a href="coc.html">Chain of Command</a>
             <a href="rules.html">Rules</a>
         </div>
