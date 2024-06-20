@@ -30,8 +30,19 @@
             height: auto;
             margin-top: 10px;
         }
-        .header-buttons {
-            margin-right: 20px;
+        .header-links {
+            display: flex;
+            align-items: center;
+        }
+        .header-links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: background-color 0.3s ease;
+            border-radius: 5px;
+        }
+        .header-links a:hover {
+            background-color: #555;
         }
         .container {
             flex: 1;
@@ -54,7 +65,7 @@
             font-size: 1.1rem;
             line-height: 1.6;
         }
-        .join-button, .coc-button {
+        .join-button {
             display: inline-block;
             background-color: #007bff; /* Blue color */
             color: white;
@@ -67,7 +78,7 @@
             margin-top: 10px;
             cursor: pointer;
         }
-        .join-button:hover, .coc-button:hover {
+        .join-button:hover {
             background-color: #0056b3; /* Darker blue on hover */
         }
         .features {
@@ -108,8 +119,10 @@
 </head>
 <body>
     <div class="header">
-        <div class="header-buttons">
-            <a href="coc.html" class="coc-button">Chain of Command</a>
+        <div class="header-links">
+            <a href="index.html">Home</a>
+            <a href="coc.html">Chain of Command</a>
+            <a href="rules.html">Rules</a>
         </div>
         <img src="FCRP.png" alt="FCRP Logo">
         <h1>Welcome to Flint County Roleplay (FCRP)</h1>
