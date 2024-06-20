@@ -8,8 +8,8 @@
     <script>
         $(document).ready(function() {
             function updatePlayerCount() {
-                var serverIP = "your_server_ip"; // Replace with your FiveM server IP
-                var serverPort = "your_server_port"; // Replace with your FiveM server port
+                var serverIP = "206.168.173.19"; // Replace with your FiveM server IP
+                var serverPort = "30120"; // Replace with your FiveM server port
                 var url = "http://" + serverIP + ":" + serverPort + "/players.json";
 
                 $.getJSON(url, function(data) {
