@@ -3,199 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flint County Roleplay</title>
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="stylesheet" href="styles.css">
+    <title>Embedded Dashboard</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        body, html {
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
-            color: #333;
-            display: flex;
-            min-height: 100vh;
-            flex-direction: column;
+            height: 100%;
+            overflow: hidden;
         }
-        .header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .header img {
-            max-width: 500px;
-            height: auto;
-            margin-top: 10px;
-        }
-        .header-links {
-            display: flex;
-            align-items: center;
-        }
-        .header-links a {
-            color: #fff;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            transition: background-color 0.3s ease;
-            border-radius: 5px;
-        }
-        .header-links a:hover {
-            background-color: #555;
-        }
-        .container {
-            flex: 1;
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-        }
-        .server-info {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .server-info h2 {
-            margin-top: 0;
-            color: #333;
-        }
-        .server-info p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-        }
-        .join-button {
-            display: inline-block;
-            background-color: #007bff; /* Blue color */
-            color: white;
-            text-align: center;
-            padding: 10px 20px;
-            text-decoration: none;
+        iframe {
             border: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-            margin-top: 10px;
-            cursor: pointer;
-        }
-        .join-button:hover {
-            background-color: #0056b3; /* Darker blue on hover */
-        }
-        .dropdown {
-            margin-top: 10px;
-            position: relative;
-            display: inline-block;
-        }
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-            border-radius: 5px;
-        }
-        .dropdown-content a {
-            color: #333;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-        .dropdown-content a:hover {
-            background-color: #f1f1f1;
-        }
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-        .features {
-            margin-top: 30px;
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
-        .feature {
-            flex: 0 1 30%;
-            background-color: #f9f9f9;
-            padding: 20px;
-            margin: 10px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        .feature h3 {
-            color: #333;
-        }
-        .feature p {
-            font-size: 0.9rem;
-            line-height: 1.5;
-        }
-        .footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #333;
-            color: #fff;
-            margin-top: auto;
-        }
-        .footer .discord-logo {
-            width: 30px;
-            margin-right: 10px;
-            vertical-align: middle;
+            width: 100%;
+            height: 100%;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <div class="header-links">
-            <a href="index.html">Home</a>
-            <div class="dropdown">
-                <button class="dropbtn">Departments</button>
-                <div class="dropdown-content">
-                    <a href="LSCSO.html">LSCSO</a>
-                    <a href="BCSO.html">BCSO</a>
-                    <a href="LSPD.html">LSPD</a>
-                    <a href="SAST.html">SAST</a>
-                    <a href="CIA.html">CIA</a>
-                    <a href="DHS.html">DHS</a>
-                </div>
-            </div>
-            <a href="coc.html">Chain of Command</a>
-            <a href="rules.html">Rules</a>
-            <a href="store.html">Store</a>
-            <a href="cad">CAD</a>
-        </div>
-        <img src="FCRP.png" alt="FCRP Logo">
-        <h1>Welcome to Flint County Roleplay</h1>
-    </div>
-    <div class="container">
-        <div class="server-info">
-            <h2>About FCRP</h2>
-            <p>Welcome to Flint County Roleplay, where immersive storytelling meets limitless possibilities in the sprawling landscapes of San Andreas. At Flint County Roleplay, we've created a vibrant community-driven environment within the FiveM platform, dedicated to delivering an unparalleled roleplaying experience. Whether you're a seasoned RP enthusiast or new to the scene, our server offers a welcoming haven where your creativity can thrive.</p>
-            <p>Our vision is simple yet ambitious: to foster a dynamic roleplaying environment that encourages rich character development, engaging narratives, and meaningful interactions. We believe in the power of collective storytelling, where every player contributes to shaping the evolving tapestry of Flint County.</p>
-            <div class="features">
-                <div class="feature">
-                    <h3>Dedicated Staff</h3>
-                    <p>Our team ensures fairness, server stability, and supports our community.</p>
-                </div>
-                <div class="feature">
-                    <h3>Custom Content</h3>
-                    <p>Exclusive scripts, vehicle models, and maps tailored for Flint County.</p>
-                </div>
-                <div class="feature">
-                    <h3>Active Community</h3>
-                    <p>Engage with players in various roles: law enforcement, civilians, and more.</p>
-                </div>
-            </div>
-            <h2>Join Flint County Roleplay</h2>
-            <p>Joining Flint County Roleplay is straightforward. Simply connect to our FiveM server, create a character that reflects your aspirations, and immerse yourself in a world where every decision matters. Our community is here to guide you through the initial steps and help you settle into your role seamlessly.</p>
-            <a href="https://cfx.re/join/o783o7" class="join-button">Join Server</a>
-        </div>
-    </div>
-    <footer class="footer">
-        <a href="https://discord.gg/jUxxeG5qt8" target="_blank">
-            <img src="discord-logo.png" alt="Discord Logo" class="discord-logo">
-        </a>
-        <p>&copy; 2024 Flint County Roleplay (FCRP). All rights reserved.</p>
-    </footer>
+    <iframe src="https://demo.communitycad.app/portal/dashboard" title="Community CAD Dashboard"></iframe>
 </body>
 </html>
