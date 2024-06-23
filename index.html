@@ -29,25 +29,22 @@
         <p>Unable to display the dashboard. Please <a href="https://demo.communitycad.app/portal/dashboard" target="_blank">click here</a> to view it.</p>
     </div>
     <script>
-        window.addEventListener("load", function() {
+        document.getElementById('dashboardIframe').onload = function() {
+            document.getElementById('noIframeMessage').style.display = 'none';
+        };
+
+        setTimeout(function() {
             var iframe = document.getElementById('dashboardIframe');
             var noIframeMessage = document.getElementById('noIframeMessage');
-
-            iframe.onload = function() {
-                noIframeMessage.style.display = 'none';
-            };
-
-            iframe.onerror = function() {
-                noIframeMessage.style.display = 'block';
-            };
-
-            // Fallback if the iframe load event does not fire
-            setTimeout(function() {
-                if (iframe.contentDocument === null) {
+            try {
+                var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                if (!iframeDoc || iframeDoc.location.href === 'about:blank') {
                     noIframeMessage.style.display = 'block';
                 }
-            }, 3000);
-        });
+            } catch (e) {
+                noIframeMessage.style.display = 'block';
+            }
+        }, 3000);
     </script>
 </body>
 </html>
