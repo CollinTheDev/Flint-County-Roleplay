@@ -26,15 +26,28 @@
 <body>
     <iframe src="https://demo.communitycad.app/portal/dashboard" title="Community CAD Dashboard" id="dashboardIframe"></iframe>
     <div class="no-iframe" id="noIframeMessage">
-        <p>If you are not seeing the dashboard, please <a href="https://demo.communitycad.app/portal/dashboard" target="_blank">click here</a> to view it.</p>
+        <p>Unable to display the dashboard. Please <a href="https://demo.communitycad.app/portal/dashboard" target="_blank">click here</a> to view it.</p>
     </div>
     <script>
-        document.getElementById('dashboardIframe').onload = function() {
-            document.getElementById('noIframeMessage').style.display = 'none';
-        };
-        document.getElementById('dashboardIframe').onerror = function() {
-            document.getElementById('noIframeMessage').style.display = 'block';
-        };
+        window.addEventListener("load", function() {
+            var iframe = document.getElementById('dashboardIframe');
+            var noIframeMessage = document.getElementById('noIframeMessage');
+
+            iframe.onload = function() {
+                noIframeMessage.style.display = 'none';
+            };
+
+            iframe.onerror = function() {
+                noIframeMessage.style.display = 'block';
+            };
+
+            // Fallback if the iframe load event does not fire
+            setTimeout(function() {
+                if (iframe.contentDocument === null) {
+                    noIframeMessage.style.display = 'block';
+                }
+            }, 3000);
+        });
     </script>
 </body>
 </html>
