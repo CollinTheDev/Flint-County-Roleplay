@@ -1,4 +1,4 @@
-fetch('https://example.com')
+fetch('https://demo.communitycad.app/')
   .then(response => response.text())
   .then(data => {
     document.getElementById('content').innerHTML = data;
