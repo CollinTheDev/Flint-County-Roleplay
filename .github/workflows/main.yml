@@ -1,0 +1,20 @@
+name: Fetch and Update Content
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs daily at midnight UTC
+
+jobs:
+  fetch-content:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch content
+        run: |
+          curl -L https://demo.communitycad.app/ > content.html
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add content.html
+          git commit -m "Update content"
+          git push
