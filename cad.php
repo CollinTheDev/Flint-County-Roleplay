@@ -1,5 +1,5 @@
 <?php
-$url = 'https://example.com';
+$url = 'https://demo.communitycad.app/';
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
