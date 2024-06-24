@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Fetch content
         run: |
-          curl -L https://example.com > content.html
+          curl -L https://demo.communitycad.app/ > content.html
       - name: Commit changes
         run: |
           git config --local user.email "action@github.com"
